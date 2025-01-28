@@ -1,0 +1,13 @@
+{
+  "name": "real-estate-application",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "build": "npm install --prefix client --production=false && npm install --prefix server && npm run build --prefix client",
+    "start": "PROJECT_ENVIRONMENT=production node ./server/index.mjs"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC"
+}

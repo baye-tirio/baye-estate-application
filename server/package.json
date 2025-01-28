@@ -1,0 +1,23 @@
+{
+  "name": "server",
+  "version": "1.0.0",
+  "description": "Server for the Baye Estate Application",
+  "main": "index.js",
+  "type": "module",
+  "scripts": {
+    "test": "nodemon index.mjs",
+    "build": "npm install && npm install --prefix ../client && npm run build --prefix ../client"
+  },
+  "author": "Baye Manga",
+  "license": "MIT",
+  "dependencies": {
+    "bcrypt": "^5.1.1",
+    "cloudinary": "^2.5.1",
+    "cookie-parser": "^1.4.7",
+    "dotenv": "^16.4.7",
+    "express": "^4.21.0",
+    "mongoose": "^7.3.2",
+    "nodemon": "^3.1.4",
+    "passport": "^0.7.0"
+  }
+}
