@@ -31,9 +31,9 @@ app.use("/api/user", UserRoutes);
 app.use("/api/authenticate", AuthenticationRoutes);
 app.use("/api/listing", ListingRoutes);
 app.use("/api/cloudinary", verifyToken, CloudinaryRoutes);
-app.use(express.static(path.join(__dirname, "../client/dist")));
+app.use(express.static(path.join(__dirname, "/client/dist")));
 app.get("*", (req, res) => {
-  res.sendFile(path.join(__dirname, "..", "client", "dist", "index.html"));
+  res.sendFile(path.join(__dirname, "client", "dist", "index.html"));
 });
 app.use((err, req, res, next) => {
   // console.log(err);
