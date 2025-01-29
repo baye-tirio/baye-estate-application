@@ -1,2 +1,4 @@
+#For ignoring node modules
 node_modules/
+#For ignoring secretes
 .env

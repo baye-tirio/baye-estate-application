@@ -8,6 +8,7 @@ import cookieParser from "cookie-parser";
 import CloudinaryRoutes from "./Routes/cloudinary.routes.mjs";
 import dotenv from "dotenv";
 import { verifyToken } from "./utils/verifyUser.mjs";
+import job from "./cron/cron.mjs";
 dotenv.config();
 const PORT = process.env.PORT;
 mongoose
@@ -23,8 +24,9 @@ mongoose
     console.log("Failed to connect to the database ");
   });
 const __dirname = path.resolve();
-console.log({__dirname});
+console.log({ __dirname });
 const app = express();
+job.start();
 app.use(express.json({ limit: "200mb" }));
 app.use(cookieParser());
 app.use("/api/user", UserRoutes);
